@@ -47,7 +47,6 @@ class TensorRTBackendRep(BackendRep):
         self.dynamic = False
 
         if self.verbose:
-            print(f'\nRunning {model.graph.name}...')
             TRT_LOGGER.min_severity = trt.Logger.VERBOSE
 
         if not isinstance(model, six.string_types):
